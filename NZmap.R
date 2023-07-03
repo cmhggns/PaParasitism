@@ -1,8 +1,6 @@
 # Load required packages
 library(ggplot2)
 library(maps)
-library(sp)
-library(mapdata)
 library(spData)
 library(ggspatial)
 library(sf)
