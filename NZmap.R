@@ -32,14 +32,4 @@ sample_sf <- st_as_sf(sampling, coords = c("lon", "lat"), crs = 4326)
 sample_sf
 
 # Make a new map with your sample coordinate shapefile added
-nzwater_sample <- ggplot() +
-  geom_sf(data=nz) +
-  geom_sf(data=nzlakes, color="skyblue4") +
-  geom_sf(data=nzrivers, color="skyblue3") +
-  geom_sf(data=sample_sf, color="red") +
-  annotation_scale(location="br") +
-  annotation_north_arrow(location="tl") +
-  theme(panel.background=element_rect(fill="skyblue2", color="skyblue2", linetype="solid"))
-
-
 nzwater + geom_sf(data=sample_sf, color="red")
